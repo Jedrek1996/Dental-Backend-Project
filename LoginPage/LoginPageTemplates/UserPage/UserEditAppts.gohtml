@@ -1,0 +1,61 @@
+{{define "userEditApptForm"}}
+
+<form method="POST">
+
+    <h1 class="actionHeader">Update Current Appointment</h1>
+
+    <div>
+        <h2 class="actionHeader"> Current appointment</h2>
+
+        <label class="actionLabel" for="currentApptType">Appointment Type: </label>
+        <select name="currentApptType" id="currentApptType">
+            <option>Consultation</option>
+            <option>Surgery</option>
+        </select>
+        <br>
+
+        <label class="actionLabel" for="currentDateSelect">Date: </label>
+        <select name="currentDateSelect" id="currentDateSelect">
+        {{range .AppointmentsDate -}}
+            <option>{{.}}</option>
+        {{end}}
+        </select>
+        <br>
+
+        <label class="actionLabel" for="currentTimeSelect">Time: </label>
+        <select name="currentTimeSelect" id="currentTimeSelect">
+        {{range .AppointmentsTime -}}
+            <option>{{.}}</option>
+        {{end}}
+        </select>
+    </div>
+    
+    <span>
+        <h2 class="actionHeader"> New Appointment</h2>
+
+        <label class="actionLabel" for="newAppointmentType">Appointment Type: </label>
+        <select name="newAppointmentType" id="newAppointmentType">
+            <option>Consultation</option>
+            <option>Surgery</option>
+        </select>
+        <br>
+
+        <label class="actionLabel" for="newDateSelect">Date: </label>
+        <select name="newDateSelect" id="newDateSelect">
+        {{range .AppointmentsDate -}}
+            <option>{{.}}</option>
+        {{end}}
+        </select>
+        <br>
+
+        <label class="actionLabel" for="newTimeSelect">Time: </label>
+        <select name="newTimeSelect" id="newTimeSelect">
+        {{range .AppointmentsTime -}}
+            <option>{{.}}</option>
+        {{end}}
+        </select>
+    </span>
+
+        <input class="actionButton" type="submit">
+</form>
+{{end}}

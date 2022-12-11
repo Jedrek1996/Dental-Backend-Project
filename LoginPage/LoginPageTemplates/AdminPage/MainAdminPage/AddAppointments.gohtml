@@ -1,0 +1,35 @@
+ {{define "AddApptAdminForm"}}
+
+
+<form method="POST">
+    <h1 class="actionHeader">Add Appointment</h1>
+
+    <label class="actionLabel" for="setAppointmentType">Add Appointment Type: </label>
+    <select name="setAppointmentType" id="setAppointmentType">
+    {{range .SettingApptType -}}
+        <option>{{.}}</option>
+    {{end}}
+    </select>
+    <br>
+
+    <label class="actionLabel" for="setDateSelect">Add Date: </label>
+    <select name="setDateSelect" id="setDateSelect">
+    {{range .SettingDate -}}
+        <option>{{.}}</option>
+    {{end}}
+    </select>
+    <br>
+
+    <label class="actionLabel" for="setTimeSelect">Add Time: </label>
+    <select name="setTimeSelect" id="setTimeSelect">
+    {{range .SettingTime -}}
+        <option>{{.}}</option>
+    {{end}}
+    </select>
+
+    <input class="actionButton" type="submit" style="display:block">
+    
+</form>
+<br>
+
+{{end}}

@@ -1,0 +1,25 @@
+{{define "signUpForm"}}
+<div class="centerDiv">
+    <form method="POST">
+    
+        <div class="mainHeaderMsg">Sign Up</div>
+
+        <label class="mainLabel" for="signupUsername">Sign up Username: </label>
+        <input class="mainInput" type="text" id="signupUsername" name="signupUsername">
+        <br>
+
+        <label class="mainLabel" for="signupPassword"> Sign up Password: </label>
+        <input class="mainInput" type="text" id="signupPassword" name="signupPassword">
+        <br>
+        
+        <div class="mainMsg" style="margin-left:2.5rem !important;">Username and Password should have more than 4 characters and no special characters!</div>
+
+        <label for="signUpButton" class="btn"></label>
+        <input style="left:45% !important;" class="buttonStyle"id="signUpButton" type="submit">
+    </form>
+
+    <div>
+        <a class="mainLink" style="bottom: -13% !important;left: 54% !important;" href="http://localhost:8080/"> Back to Log In</a>    
+    </div>
+</div>
+{{end}}

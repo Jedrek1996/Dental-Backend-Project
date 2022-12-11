@@ -1,0 +1,31 @@
+{{define "AvailableAppts"}}
+
+<h1 class="tableHeader">Available Appointments</h1>
+
+<span>
+  <table style="width: 75%;">
+
+    <tr>
+      <th>Appointment Type</th>
+      {{range .AvailableType -}}
+          <th>{{.}}</th>
+      {{end}}
+    </tr>
+
+    <tr>
+      <th>Date</th>
+      {{range .AvailableDate -}}
+          <th>{{.}}</th>
+      {{end}}
+    </tr>
+
+    <tr>
+     <th>Time</th>
+      {{range .AvailableTime -}}
+          <th>{{.}}</th>
+      {{end}}
+    </tr>
+
+  </table>
+</span>
+{{end}}

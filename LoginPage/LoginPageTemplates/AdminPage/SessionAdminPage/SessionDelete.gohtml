@@ -1,0 +1,16 @@
+ {{define "SessionDelete"}}
+<form method="POST">
+    <div>
+        <h1 class="actionHeader"> Delete Session Cookie</h1>
+
+        <label class="actionLabel" for="deleteSession">Delete Session: </label>
+        <select name="deleteSession" id="deleteSession">
+        {{range .Name -}}
+            <option>{{.}}</option>
+        {{end}}
+        </select>
+    </div>
+
+        <input class="actionButton" type="submit">
+</form>
+ {{end}}

@@ -1,0 +1,26 @@
+[
+  {
+    "AppointmentType": "Consultation",
+    "Date": "01-12-2022",
+    "Time": "12:00",
+    "User": ""
+  },
+  {
+    "AppointmentType": "Surgery",
+    "Date": "01-12-2022",
+    "Time": "13:30",
+    "User": ""
+  },
+  {
+    "AppointmentType": "Consultation",
+    "Date": "02-12-2022",
+    "Time": "12:00",
+    "User": ""
+  },
+  {
+    "AppointmentType": "Consultation",
+    "Date": "02-12-2022",
+    "Time": "14:00",
+    "User": ""
+  }
+]

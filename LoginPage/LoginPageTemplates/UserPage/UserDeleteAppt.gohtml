@@ -1,0 +1,31 @@
+ {{define "userDeleteApptForm"}}
+
+<form method="POST">
+        <h1 class="actionHeader">Delete appointment</h1>
+
+        <label class="actionLabel"  for="deleteApptType">Appointment Type: </label>
+        <select name="deleteApptType" id="deleteApptType">
+            <option>Consultation</option>
+            <option>Surgery</option>
+        </select>
+        <br>
+
+        <label class="actionLabel"  for="deleteDateSelect">Date: </label>
+        <select name="deleteDateSelect" id="deleteDateSelect">
+        {{range .AppointmentsDate -}}
+            <option>{{.}}</option>
+        {{end}}
+        </select>
+        <br>
+
+        <label class="actionLabel"  for="deleteTimeSelect">Time: </label>
+        <select name="deleteTimeSelect" id="deleteTimeSelect">
+        {{range .AppointmentsTime -}}
+            <option>{{.}}</option>
+        {{end}}
+        </select>
+
+        <input class="actionButton" type="submit">
+</form>
+
+{{end}}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Add Appointment Page</title>
+    <link rel="stylesheet" type="text/css" href="/LoginPage/CSS/style.css" />
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            outline: none;
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        body{
+            height:100%;
+            width:100%;
+            background:beige !important;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+    </style>
+
+</head>
+
+<br/>
+    <h1 class="actionMainHeader">Admin Add Appointments</h1>
+
+    {{template "AllAppointmentsForm" .}}
+
+    {{template "AvailableAppts" .}}
+    
+    {{template "BookedAppts" .}}
+
+    {{template "AddApptAdminForm" .}}
+
+<h1 class ="actionLinkText">Other actions</h1>
+<span>
+    <a class="actionLink" href="http://localhost:8080/AdminRemoveAppointment">Remove Appointments(Admin)</a>
+</span>
+<span>
+    <a class="actionLink" href="http://localhost:8080/AdminSessionPage">Remove Session(Admin)</a>
+</span>
+<span>
+    <a class="actionLink" href="http://localhost:8080/AdminUserPage">Remove User(Admin)</a>
+</span>
+<span>
+    <a class="actionLink" href="http://localhost:8080/UserLogOut">Log Out</a>
+</span>
+
+</body>

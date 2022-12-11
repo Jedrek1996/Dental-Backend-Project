@@ -1,0 +1,35 @@
+{{define "loginForm"}}
+
+<h1 id ="loginText">Jed's Dental Login Page</h1>
+
+<div class="centerDiv">
+    <form method="POST">
+
+        <label class ="mainLabel" for="loginUsername">Username: </label>
+        <input class="mainInput" type="text" id="loginUsername" name="loginUsername">
+        <br>
+
+        <label class ="mainLabel" for="loginPassword">Password: </label>
+        <input class="mainInput" type="text" id="loginPassword" name="loginPassword">
+        <br>
+
+        {{if eq .LoggedIn "Empty"}}
+            <div class= "mainMsg">Please enter your credentials</div>
+        {{else if eq .LoggedIn "Wrong"}}
+            <div class= "mainMsg loginTextMsgWrong">Your username/password is wrong</div>
+        {{end}} 
+
+        <label class ="buttonLabel" for="loginButton" class="btn"></label>
+        <input class="buttonStyle"id="loginButton" type="submit">
+        <br>
+
+        <div>
+            <a class="mainLink" href="http://localhost:8080/LoginPageSignUp"> Sign Up</a>
+        </div>
+
+    </form>
+
+</div>
+
+
+{{end}}

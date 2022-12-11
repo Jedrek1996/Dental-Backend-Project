@@ -1,0 +1,34 @@
+{{define "userSelectApptForm"}}
+
+
+<form method="POST">
+    <h1 class="actionHeader">Please fill in the Appointment details</h1>
+
+    <label class="actionLabel" for="appointmentType">Appointment Type: </label>
+    <select name="appointmentType" id="appointmentType">
+        <option>Consultation</option>
+        <option>Surgery</option>
+    </select>
+    <br>
+
+    <label class="actionLabel" for="dateSelect">Date: </label>
+    <select name="dateSelect" id="dateSelect">
+    {{range .AppointmentsDate -}}
+        <option>{{.}}</option>
+    {{end}}
+    </select>
+    <br>
+
+    <label class="actionLabel" for="timeSelect">Time: </label>
+    <select name="timeSelect" id="timeSelect">
+    {{range .AppointmentsTime -}}
+        <option>{{.}}</option>
+    {{end}}
+    </select>
+
+    <input class="actionButton" type="submit" style="display:block">
+    
+</form>
+<br>
+
+{{end}}

@@ -1,0 +1,37 @@
+{{define "userBookedAppts"}}
+
+<h1 class="tableHeader">Your Appointments</h1>
+
+<span>
+  <table style="width: 50%;">
+    <tr>
+      <th>&nbsp</th>
+      {{range .ApptVal -}}
+          <th>{{.}}</th>
+      {{end}}
+    </tr>
+
+    <tr>
+      <th>Appointment Type</th>
+      {{range .UserAppType -}}
+          <th>{{.}}</th>
+      {{end}}
+    </tr>
+
+    <tr>
+      <th>Date</th>
+      {{range .UserDate -}}
+          <th>{{.}}</th>
+      {{end}}
+    </tr>
+
+    <tr>
+     <th>Time</th>
+      {{range .UserTime -}}
+          <th>{{.}}</th>
+      {{end}}
+    </tr>
+
+  </table>
+</span>
+{{end}}

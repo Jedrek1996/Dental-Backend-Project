@@ -1,0 +1,20 @@
+ {{define "RemoveApptAdminForm"}}
+
+
+<form method="POST">
+    <h1 class="actionHeader">Remove User</h1>
+    
+    <label class="actionLabel" for="removeUser">Remove User: </label>
+    <select name="removeUser" id="removeUser">
+    {{range .Users -}}
+        <option>{{.}}</option>
+    {{end}}
+    </select>
+    <br>
+
+    <input class="actionButton" type="submit" style="display:block">
+    
+</form>
+<br>
+
+{{end}}

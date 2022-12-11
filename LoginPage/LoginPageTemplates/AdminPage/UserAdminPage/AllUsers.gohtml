@@ -1,0 +1,24 @@
+{{define "AllUserForm"}}
+
+<h1 class="tableHeader">All Users</h1>
+
+<span>
+  <table style="width: 50%;">
+
+    <tr>
+      <th>&nbsp</th>
+      {{range .UserNos -}}
+          <th>{{.}}</th>
+      {{end}}
+    </tr>
+
+    <tr>
+      <th>Username</th>
+      {{range .Users -}}
+          <th>{{.}}</th>
+      {{end}}
+    </tr>
+
+  </table>
+</span>
+{{end}}

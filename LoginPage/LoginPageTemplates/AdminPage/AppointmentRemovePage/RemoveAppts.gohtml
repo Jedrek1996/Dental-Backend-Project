@@ -1,0 +1,36 @@
+ {{define "RemoveApptAdminForm"}}
+
+<div>
+    <form method="POST">
+        <h1 class="actionHeader">Remove Appointment</h1>
+
+        <label class="actionLabel" for="removeAppointmentType">Remove Appointment Type: </label>
+        <select name="removeAppointmentType" id="removeAppointmentType">
+        {{range .SettingApptType -}}
+            <option>{{.}}</option>
+        {{end}}
+        </select>
+        <br>
+
+        <label class="actionLabel" for="removeDateSelect">Remove Date: </label>
+        <select name="removeDateSelect" id="removeDateSelect">
+        {{range .SettingDate -}}
+            <option>{{.}}</option>
+        {{end}}
+        </select>
+        <br>
+
+        <label class="actionLabel" for="removeTimeSelect">Remove Time: </label>
+        <select name="removeTimeSelect" id="removeTimeSelect">
+        {{range .SettingTime -}}
+            <option>{{.}}</option>
+        {{end}}
+        </select>
+
+        <input class="actionButton" type="submit" style="display:block">
+        
+    </form>
+</div>
+<br>
+
+{{end}}

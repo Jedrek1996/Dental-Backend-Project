@@ -1,0 +1,12 @@
+[
+  {
+    "Username": "Admin",
+    "Password": "$2a$14$Cpt699rQS0JgSwzxpLbSWe/BA2yi6aTaPhtE9zK3L0Z/0GqX/Euke",
+    "Rights": "Admin"
+  },
+  {
+    "Username": "Test",
+    "Password": "$2a$14$QIdbWMI3EGCNTQ7AWRNRA.5zspwjMxBP5P6AEb00xNzP.yh4voaxK",
+    "Rights": ""
+  }
+]

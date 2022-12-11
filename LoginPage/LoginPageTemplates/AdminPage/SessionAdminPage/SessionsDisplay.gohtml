@@ -1,0 +1,23 @@
+{{define "SessionDisplay"}}
+
+<h1 class="tableHeader">Session Cookie</h1>
+
+<span>
+  <table style="width: 50%;">
+    <tr>
+      <th>Session Name (Username)</th>
+      {{range .Name -}}
+          <th>{{.}}</th>
+      {{end}}
+    </tr>
+
+    <tr>
+      <th>Session Value</th>
+      {{range .Value -}}
+          <th>{{.}}</th>
+      {{end}}
+    </tr>
+
+  </table>
+</span>
+{{end}}

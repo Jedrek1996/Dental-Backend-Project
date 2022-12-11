@@ -1,0 +1,36 @@
+{{define "AllAppointmentsForm"}}
+<h1 class="tableHeader">All Appointments</h1>
+
+<span>
+  <table style="width: 50%;">
+    <tr>
+      <th>&nbsp</th>
+      {{range .ApptVal -}}
+          <th>{{.}}</th>
+      {{end}}
+    </tr>
+
+    <tr>
+      <th>Appointment Type</th>
+      {{range .AppointmentType -}}
+          <th>{{.}}</th>
+      {{end}}
+    </tr>
+
+    <tr>
+      <th>Date</th>
+      {{range .Date -}}
+          <th>{{.}}</th>
+      {{end}}
+    </tr>
+
+    <tr>
+     <th>Time</th>
+      {{range .Time -}}
+          <th>{{.}}</th>
+      {{end}}
+    </tr>
+
+  </table>
+</span>
+{{end}}

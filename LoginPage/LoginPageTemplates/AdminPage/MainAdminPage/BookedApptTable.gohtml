@@ -1,0 +1,36 @@
+{{define "BookedAppts"}}
+
+<div>
+  <h1 class="tableHeader">Booked Appointments</h1>
+  <table style="width: 75%;">
+    <tr>
+      <th>Type</th>
+      {{range .BookedType -}}
+          <th>{{.}}</th>
+      {{end}}
+    </tr>
+
+    <tr>
+      <th>Date</th>
+      {{range .BookedDate -}}
+          <th>{{.}}</th>
+      {{end}}
+    </tr>
+
+    <tr>
+     <th>Time</th>
+      {{range .BookedTime -}}
+          <th>{{.}}</th>
+      {{end}}
+    </tr>
+    <tr>
+
+     <th>User</th>
+      {{range .BookedUser -}}
+          <th>{{.}}</th>
+      {{end}}
+    </tr>
+
+  </table>
+</div>
+{{end}}
