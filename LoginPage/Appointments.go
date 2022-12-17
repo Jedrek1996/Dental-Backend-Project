@@ -97,7 +97,7 @@ func appDataStruct() AppointmentDataStruct {
 
 	return appointmentsData
 }
- 
+
 // Returns AppDataStrcut (Admin) to pass into allAdminApptAndSettings Struct for Gohtml template ---✨
 func allAppDataStruct() AllAppointmentsDataStruct {
 
@@ -206,6 +206,9 @@ func getAppointmentSettings() AppointmentSetting {
 // Get Appointment from Appointments JSON ---✨
 func getAppointments() []AppointmentsDetail {
 
+	muFile.Lock()
+	defer muFile.Unlock()
+
 	file, err := ioutil.ReadFile("appointments.json")
 	if err != nil {
 		log.Fatal(err)
@@ -218,6 +221,9 @@ func getAppointments() []AppointmentsDetail {
 
 // Get Booked Appointments from BookedAppointments JSON---✨
 func getBookedAppointmentsData() []AppointmentsDetail {
+
+	muFile.Lock()
+	defer muFile.Unlock()
 
 	file, err := ioutil.ReadFile("bookedAppointments.json")
 	if err != nil {
@@ -232,6 +238,7 @@ func getBookedAppointmentsData() []AppointmentsDetail {
 // Compares the BookedAppointments and Appointments JSON (Returns available Appointments) ---✨
 // Result: Available Appointment for Users and Admin structs
 func getAvailableAppointments() []AppointmentsDetail {
+	
 
 	allAppt := getAppointments()
 	bookedAppt := getBookedAppointmentsData()
