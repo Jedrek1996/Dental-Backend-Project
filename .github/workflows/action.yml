@@ -2,3 +2,12 @@ name: My Workflow File
 on:
   push:
     branches: [main]
+
+
+jobs: 
+  builds:
+    name: My Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code 
+        uses: actions/checkout@v2
